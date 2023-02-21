@@ -1,24 +1,72 @@
 <!DOCTYPE html>
 <html lang = "en">
     <head>
+        <!-- META TAGS-->
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
+        <!-- TITLE -->
         <title>myCAR</title>
 
-        
-        <link href="src/css/bootstrap.min.css" rel="stylesheet">
+        <!-- LINK TAGS-->
+            <!-- CSS LINKS-->
+            <link href="src/css/bootstrap.min.css" rel="stylesheet">
+            <link href="src/css/global.css" rel="stylesheet">
+            <link href="src/css/index.css" rel="stylesheet">
+
     </head>
     <body>
+        <div>
+            <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+                &nbsp;
+            </nav>
+        </div>
 
+        <div class = "container p-5">
+            <div class = "mx-auto p-5 mt-2 text-center">
+                <p class = "display-3">
+                    myCAR
+                </p>
+                <p class = "text-muted font-italic">
+                    the place to manage your car
+                </p>
+            </div>
+            <div class = "text-center">
+                <!--<form> -->
+                    <!-- Email input -->
+                    <div class="form-outline mb-4">
+                        <input type="email" id="emailForm" placeholder = "Email" class="form-control" />
+                        <label class="form-label" for="form2Example1"></label>
+                    </div>
 
+                    <!-- Password input -->
+                    <div class="form-outline mb-4">
+                        <input type="password" id="passwordForm" placeholder = "Password" class="form-control" />
+                        <label class="form-label" for="form2Example2"></label>
+                    </div>
+                    <!-- Sign in button -->
+                    <button  href = "src/html/car-management.html" type="button" class="btn btn-primary btn-block mb-4">Sign in</button>
 
-
+                    <!-- Register buttons -->
+                    <div class="text-center">
+                        <p>Not a member? <a href="#!">Register</a></p>
+                        <p>or...</p>
+                        <button href = "src/html/car-management.html" class="btn btn-lg btn-block btn-primary shadow-lg p-3 mb-5 bg-white" style="background-color: #ffffff;border:none;" type="submit">
+                            <img class = "mr-3" src = "src/images/google-icon.svg" width = "30px"></img> 
+                            <span style = "color: black">Sign up with Google</span>
+                        </button>
+                    </div>
+                <!-- </form> -->
+            </div>
+        </div>
 
 
 
 
         <script src="src/js/bootstrap.min.js"></script>
+        <script src="https://kit.fontawesome.com/b52d30833a.js" crossorigin="anonymous">
+            
+        </script>
     </body>
 </html>
