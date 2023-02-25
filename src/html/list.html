@@ -3,9 +3,10 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>myDIY</title>
+    <title>myLIST</title>
+
     <link href="../css/bootstrap.min.css" rel="stylesheet">
-    <link href="../css/global.css" rel="stylesheet">
+
   </head>
   <body>
 
@@ -43,28 +44,70 @@
                 <a class="nav-link"> |  <span class="sr-only">(current)</span></a>
               </li>
               <li class="nav-item active">
-                  <a class="nav-link" OnClick ="accountAlert()">myACCOUNT <span class="sr-only">(current)</span></a>
+                  <a class="nav-link" OnClick = "accountAlert()">myACCOUNT <span class="sr-only">(current)</span></a>
               </li>
             </ul>
           </div>
         </nav>
       </div>
-      <div>
-        <!-- Back button to diy.html -->
-        <a href="diy.html"><button class="btn btn-primary" style="margin: 10px 10px 10px 10px;"><i class="fa fa-arrow-left"></i> Back</button></a>
+
+
+    <h3 class = "text-center mt-5 display-1">myLIST</h3>
+    <p class = "fs-2 text-center text-muted font-italic" style = "font-size: x-large;">
+      list the items you need
+    </p>
+    <div class = "container">
+      <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">Item</th>
+            <th scope="col">Price</th>
+            <th scope="col">Link</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Headlights</td>
+            <td>$29.59</td>
+            <td><a href="https://a.co/d/4ehLNw5">https://a.co/d/4ehLNw5</a></td>
+          </tr>
+          <tr>
+            <td>Tires</td>
+            <td>$119.99</td>
+            <td><a href="https://a.co/d/dCQfWcO">https://a.co/d/dCQfWcO</a></td>
+          </tr>
+          <tr>
+            <td>Motor Oil</td>
+            <td>$26.97</td>
+            <td><a href="https://a.co/d/8Vwp1ik">https://a.co/d/8Vwp1ik</a></td>
+          </tr>
+        </tbody>
+      </table>
+
+      <div class = "text-right mb-5">
+        <span>
+          <a OnClick = "addAlert()" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">Add Item</a>
+        </span>
+        <span>
+          <a OnClick = "removeAlert()" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">Remove Item</a>
+        </span>
       </div>
+    </div>
 
-
-      <h3 class="text-center display-1">Check your fluids</h3>
-      <p align="center"><iframe src="https://www.youtube.com/embed/3NiEikrHV7c" width=800 height="500"></iframe></p>
-
-
-    
-
-
-    
+    <script> function accountAlert() {
+      alert("This is where you would view your account information. Thanks for clicking!")
+    }</script>
+    <script>
+      function addAlert () {
+        alert("This is where you would add an item to your list. Thanks for clicking!")
+      }
+    </script>
+    <script>
+      function removeAlert () {
+        alert("This is where you would remove an item from your list. Thanks for clicking!")
+      }
+    </script>
     <script src="../js/bootstrap.min.js"></script>
     <script src="https://kit.fontawesome.com/b52d30833a.js" crossorigin="anonymous"></script>
-
   </body>
 </html>

@@ -50,9 +50,9 @@
 
                     <!-- Register buttons -->
                     <div class="text-center">
-                        <p>Not a member? <a href="#!">Register</a></p>
+                        <p>Not a member? <a OnClick = "registerAlert()">Register</a></p>
                         <p>or...</p>
-                        <button href = "src/html/management.html" class="btn btn-lg btn-block btn-primary shadow-lg p-3 mb-5 bg-white" style="background-color: #ffffff;border:none;" type="submit">
+                        <button OnClick = "googleAlert()" class="btn btn-lg btn-block btn-primary shadow-lg p-3 mb-5 bg-white" style="background-color: #ffffff;border:none;">
                             <img class = "mr-3" src = "src/images/google-icon.svg" width = "30px"></img> 
                             <span style = "color: black">Sign up with Google</span>
                         </button>
@@ -63,7 +63,16 @@
 
 
 
-
+        <script>
+            function registerAlert() {
+                alert("This is where you will register an account. Thanks for the click!")
+            }
+        </script>
+        <script>
+            function googleAlert() {
+                alert("This is where you will sign up with Google. Thanks for the click!")
+            }
+        </script>
         <script src="src/js/bootstrap.min.js"></script>
         <script src="https://kit.fontawesome.com/b52d30833a.js" crossorigin="anonymous">
             
