@@ -1,0 +1,44 @@
+@import url('https://fonts.googleapis.com/css2?family=Genos&display=swap');
+
+nav {
+    background-color: #388087;
+}
+
+.btn-primary {
+    background-color:#6FB3B8;
+    border-color: #C2EDCE;
+}
+
+.btn-primary:hover {
+    border-color:#6FB3B8;
+    background-color: #C2EDCE;
+}
+
+.modify-button {
+    color: #388087;
+    padding: 5px;
+    background-color: #C2EDCE;
+}
+
+hr {
+    background-color: #C2EDCE;
+}
+
+body {
+    background-color: #f2fcf5;
+}
+
+.display-3, .display-2, .display-1 {
+    color: #388087;
+    font-family: 'Genos', sans-serif;
+}
+
+
+
+.font-italic {
+    color: #6FB3B8;
+}
+
+.link {
+    color: #388087;
+}

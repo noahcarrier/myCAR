@@ -1,17 +1,24 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <meta charset="UTF-8">
+    <!-- META TAGS-->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>myLIST</title>
 
-    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <!-- TITLE -->
+    <title>myCAR</title>
+
+    <!-- LINK TAGS-->
+        <!-- CSS LINKS-->
+        <link href="../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../css/global.css" rel="stylesheet">
 
   </head>
   <body>
 
     <div>
-      <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <nav class="navbar navbar-expand-lg navbar-dark">
           <a class="navbar-brand" href="../../index.html">myCAR</a>
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -53,7 +60,7 @@
 
 
     <h3 class = "text-center mt-5 display-1">myLIST</h3>
-    <p class = "fs-2 text-center text-muted font-italic" style = "font-size: x-large;">
+    <p class = "fs-2 text-center font-italic" style = "font-size: x-large;">
       list the items you need
     </p>
     <div class = "container">
@@ -69,27 +76,27 @@
           <tr>
             <td>Headlights</td>
             <td>$29.59</td>
-            <td><a href="https://a.co/d/4ehLNw5">https://a.co/d/4ehLNw5</a></td>
+            <td><a class = "link" href="https://a.co/d/4ehLNw5">https://a.co/d/4ehLNw5</a></td>
           </tr>
           <tr>
             <td>Tires</td>
             <td>$119.99</td>
-            <td><a href="https://a.co/d/dCQfWcO">https://a.co/d/dCQfWcO</a></td>
+            <td><a class = "link"  href="https://a.co/d/dCQfWcO">https://a.co/d/dCQfWcO</a></td>
           </tr>
           <tr>
             <td>Motor Oil</td>
             <td>$26.97</td>
-            <td><a href="https://a.co/d/8Vwp1ik">https://a.co/d/8Vwp1ik</a></td>
+            <td><a class = "link"  href="https://a.co/d/8Vwp1ik">https://a.co/d/8Vwp1ik</a></td>
           </tr>
         </tbody>
       </table>
 
       <div class = "text-right mb-5">
         <span>
-          <a OnClick = "addAlert()" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">Add Item</a>
+          <a OnClick = "addAlert()" class="btn btn-primary mb-4">Add Item</a>
         </span>
         <span>
-          <a OnClick = "removeAlert()" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">Remove Item</a>
+          <a OnClick = "removeAlert()" class="btn btn-primary mb-4">Remove Item</a>
         </span>
       </div>
     </div>
