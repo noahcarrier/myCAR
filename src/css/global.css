@@ -33,6 +33,11 @@ body {
     font-family: 'Genos', sans-serif;
 }
 
+.display-5 {
+    color: black;
+    font-family: 'Genos', sans-serif;
+    font-size: 4rem;
+}
 
 
 .font-italic {
