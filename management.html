@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang = "en">
+    <head>
+        <!-- META TAGS-->
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <!-- TITLE -->
+        <title>myCAR</title>
+
+        <!-- LINK TAGS-->
+            <!-- CSS LINKS-->
+            <link href="../css/bootstrap.min.css" rel="stylesheet">
+            <link href="../css/global.css" rel="stylesheet">
+
+    </head>
+    <body>
+        <div>
+            <nav class="navbar navbar-expand-lg navbar-dark">
+                <a class="navbar-brand" href="../../index.html">myCAR</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"></span>
+                </button>
+              
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                  <ul class="navbar-nav ml-auto">
+                    <li class="nav-item active">
+                      <a class="nav-link" href="management.html">myMANAGER <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item active">
+                      <a class="nav-link"> |  <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="diy.html">myDIY <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link"> |  <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="list.html">myLIST <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item active">
+                      <a class="nav-link"> |  <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item active">
+                      <a class="nav-link" href="shops.html">mySHOPS <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item active">
+                      <a class="nav-link"> |  <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item dropdown active">
+                      <a class="nav-link dropdown-toggle active" data-bs-toggle="dropdown">myACCOUNT <span class="sr-only">(current)</span></a>
+                      <div class="dropdown-menu">
+                          <a class="dropdown-item">Edit Account</a>
+                          <a class="dropdown-item">Logout</a>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </nav>
+        </div>
+        <div style = "margin-bottom: 100px;">
+          <h1 class = "display-1 text-center mt-5">myMANAGER</h1>
+          <p class = "fs-2 text-center font-italic" style = "font-size: x-large;">
+            meet your options
+          </p>
+        </div>
+
+        <div id = "car-entry-1">
+          <hr>
+          <div id = "car-data-1">
+            <div class="row">
+              <div class = "col-md-1"></div>
+              <div class="col-md-2">
+                <img class = "rounded" src = "../images/exampleCar.png" alt ="car-1" width = "200px">
+              </div>
+              <div class = "col-md-4">
+                <p style = "font-size: xx-large;">
+                  2008 VOLKSWAGEN EOS
+                </p>
+                <p style = "font-size: x-large;"">
+                  "Blue Beetle"
+                </p>
+                <p style = "font-size: large">
+                  <b>Miles:</b> 139,810
+                </p>
+                <p style = "font-size: large">
+                  <b>Purchased:</b> 19 July 2009
+                </p>
+              </div>
+              <div class = "col-md-4">
+                <p style = "font-size: x-large;">
+                  <b>Last Updated:</b> 28 October 2021
+                </p>
+                <p style = "font-size: large">
+                  <b>Miles to next oil change:</b> 1,190
+                </p>
+                <a type = "button" OnClick="seeMoreAlert()" class = "btn btn-primary">See More</a>
+                <div class = "mt-3 align">
+                  <button style = "margin-left: 250px; background:none; border: none;" OnClick="editAlert()"><i class="fa-solid fa-pen-to-square modify-button rounded"></i></button>
+                  <button style = "margin-left: 30px; background: none;border: none"  OnClick="deleteAlert()"><i class="fa-solid fa-trash modify-button rounded"></i></button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <hr>
+        </div>
+        <div>
+          <hr style = "background-color: #6FB3B8;width: 30%;">
+          <div class="container text-center">
+            <a OnClick="addNewCarAlert()" class="inline_block" style = "color:#388087">
+              Add New Car &#8853; 
+            </a>
+          </div>
+        </div>
+
+
+
+        <script> function seeMoreAlert() {
+          alert("This is where you would see more information about the car. Thanks for clicking!")
+        }</script>
+        <script> function addNewCarAlert() {
+          alert("This is where you would add a new car. Thanks for clicking!")
+        }</script>
+        <script> function editAlert() {
+          alert("This is where you would edit your car. Thanks for clicking!")
+        }</script>
+        <script> function deleteAlert() {
+          alert("This is where you would delete your car. Thanks for clicking!")
+        }</script>
+        <script> function accountAlert() {
+          alert("This is where you would view your account information. Thanks for clicking!")
+        }</script>
+        <script src="../js/bootstrap.min.js"></script>
+        <script src="https://kit.fontawesome.com/b52d30833a.js" crossorigin="anonymous"></script>
+
+    </body>
+</html>
