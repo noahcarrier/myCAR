@@ -62,7 +62,7 @@
         </div>
         <div style = "margin-bottom: 100px;">
           <h1 class = "display-1 text-center mt-5">myMANAGER</h1>
-          <p class = "fs-2 text-center font-italic" style = "font-size: x-large;">
+          <p class = "fs-2 text-center font-italic" style = "font-size: x-large;" id = "greeting">
             meet your options
           </p>
         </div>
@@ -132,7 +132,11 @@
         <script> function accountAlert() {
           alert("This is where you would view your account information. Thanks for clicking!")
         }</script>
-        
+        <script>
+          var name = document.cookie.split("=")[1];
+          document.getElementById("greeting").innerText = "meet your options, " + name + "!" ;
+          console.log("Greeted!");
+        </script>
         <script src="https://kit.fontawesome.com/b52d30833a.js" crossorigin="anonymous"></script>
         <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
         <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>

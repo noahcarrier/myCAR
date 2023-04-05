@@ -33,28 +33,23 @@
             </div>
             <div class = "text-center">
                 <!--<form> -->
-                    <!-- Email input -->
+                    <!-- Username input -->
                     <div class="form-outline mb-4">
-                        <input type="email" id="emailForm" placeholder = "Email" class="form-control" />
-                        <label class="form-label" for="form2Example1"></label>
+                        <input type="username" id="usernameForm" placeholder = "Username" class="form-control" />
+                        <label class="form-label"></label>
                     </div>
 
                     <!-- Password input -->
                     <div class="form-outline mb-4">
                         <input type="password" id="passwordForm" placeholder = "Password" class="form-control" />
-                        <label class="form-label" for="form2Example2"></label>
+                        <label class="form-label"></label>
                     </div>
                     <!-- Sign in button -->
-                    <a href = "src/html/management.html" type="button" class="btn btn-primary btn-block mb-4">Sign in</a>
+                    <a type="button" class="btn btn-primary btn-block mb-4" OnClick = "login()">Sign in</a>
 
                     <!-- Register buttons -->
                     <div class="text-center">
                         <p>Not a member? <a id = "register" OnClick = "registerAlert()">Register</a></p>
-                        <p>or...</p>
-                        <button OnClick = "googleAlert()" class="btn btn-lg btn-block btn-primary shadow-lg p-3 mb-5 bg-white" style="background-color: #ffffff;border:none;">
-                            <img class = "mr-3" src = "src/images/google-icon.svg" width = "30px"></img> 
-                            <span style = "color: black">Sign up with Google</span>
-                        </button>
                     </div>
                 <!-- </form> -->
             </div>
@@ -68,8 +63,10 @@
             }
         </script>
         <script>
-            function googleAlert() {
-                alert("This is where you will sign up with Google. Thanks for the click!")
+            function login(){
+                var name = document.getElementById("usernameForm").value;
+                document.cookie = "name=" + name;
+                window.location.href = "src/html/management.html";
             }
         </script>
         <script src="https://kit.fontawesome.com/b52d30833a.js" crossorigin="anonymous"></script>
