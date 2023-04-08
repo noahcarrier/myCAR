@@ -1,0 +1,18 @@
+function calculateTotalCarSpending(transactions) {
+    // Filter the transactions to only include those related to the car
+    const carTransactions = transactions.filter(transaction => transaction.category === 'car');
+    
+    // Calculate the total amount spent on the car
+    const totalCarSpending = carTransactions.reduce((accumulator, transaction) => accumulator + transaction.amount, 0);
+    
+    return totalCarSpending;
+  }
+  
+  const transactions = [
+    { date: '2022-01-01', category: 'car', amount: -50, description: 'Oil change' },
+    { date: '2022-02-01', category: 'car', amount: -100, description: 'Tire replacement' },
+    { date: '2022-03-01', category: 'car', amount: -500, description: 'Engine repair' }
+  ];
+  
+  const totalCarSpending = calculateTotalCarSpending(transactions);
+  console.log(`Total spending on the car: $${totalCarSpending}`);

@@ -13,8 +13,6 @@
         <!-- CSS LINKS-->
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
         <link href="../css/global.css" rel="stylesheet">
-		
-
   </head>
   <body>
 
@@ -71,15 +69,24 @@
     </p>
     <div class = "container">
     
-	
-
-	
-	
 <table align='center' cellspacing=2 cellpadding=1 id="data_table" border=1>
 <tr>
-<th>Item</th>
-<th><a href="price.html" style="color:black">Price</a></th>
+<th><a href="item.html" style="color:black">Item</a></th>
+<th>Price↓</th>
 <th>Link</th>
+</tr>
+
+
+<tr id="row3">
+<td id="item_row3">Motor Oil</td>
+<td id="price_row3">$26.97</td>
+<td id="link_row3">https://a.co/d/8Vwp1ik</td>
+<td>
+<input type="button" id="edit_button3" value="Edit" class="btn btn-primary mb-4" onclick="edit_row('3')">
+<input type="button" id="save_button3" value="Save" class="btn btn-primary mb-4" onclick="save_row('3')">
+<br>
+<input type="button" value="Delete" class="btn btn-primary mb-4" onclick="delete_row('3')">
+</td>
 </tr>
 
 <tr id="row1">
@@ -106,17 +113,6 @@
 </td>
 </tr>
 
-<tr id="row3">
-<td id="item_row3">Motor Oil</td>
-<td id="price_row3">$26.97</td>
-<td id="link_row3">https://a.co/d/8Vwp1ik</td>
-<td>
-<input type="button" id="edit_button3" value="Edit" class="btn btn-primary mb-4" onclick="edit_row('3')">
-<input type="button" id="save_button3" value="Save" class="btn btn-primary mb-4" onclick="save_row('3')">
-<br>
-<input type="button" value="Delete" class="btn btn-primary mb-4" onclick="delete_row('3')">
-</td>
-</tr>
 
 <tr>
 <td><input type="text" id="new_item"></td>
