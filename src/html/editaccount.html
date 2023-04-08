@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang = "en">
+    <head>
+        <!-- META TAGS-->
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <!-- TITLE -->
+        <title>myCAR</title>
+
+        <!-- LINK TAGS-->
+            <!-- CSS LINKS-->
+            <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+            <link href="../css/global.css" rel="stylesheet">
+    </head>
+    <body>
+        <div>
+            <nav class="navbar navbar-expand-lg navbar-dark">
+                <a class="navbar-brand" href="../../index.html">myCAR</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"></span>
+                </button>
+              
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                  <ul class="navbar-nav ml-auto">
+                    <li class="nav-item active">
+                      <a class="nav-link" href="management.html">myMANAGER <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item active">
+                      <a class="nav-link"> |  <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="diy.html">myDIY <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link"> |  <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="list.html">myLIST <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item active">
+                      <a class="nav-link"> |  <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item active">
+                      <a class="nav-link" href="shops.html">mySHOPS <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item active">
+                      <a class="nav-link"> |  <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item dropdown active">
+                      <a class="nav-link dropdown-toggle active" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">myACCOUNT</a>
+                      <div class="dropdown-menu">
+                          <a class="dropdown-item" href = "#">Edit Account</a>
+                          <div class="dropdown-divider"></div>
+                          <a class="dropdown-item" href = "../../index.html">Logout</a>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </nav>
+        </div>
+        <div style = "margin-bottom: 100px;">
+          <h1 class = "display-1 text-center mt-5">Account Information</h1>
+        </div>
+
+        <div class="panel panel-default">
+            <div class="panel-heading">
+            </div>
+            <div class="panel-body">
+              <div class="form-group">
+                <label class="col-sm-2 control-label">First Name</label>
+                <div class="col-sm-10">
+                  <input type="text" class="form-control">
+                </div>
+              </div>
+              <div class="form-group">
+                <label class="col-sm-2 control-label">Last Name</label>
+                <div class="col-sm-10">
+                  <input type="text" class="form-control">
+                </div>
+              </div>
+              <div class="form-group">
+                <label class="col-sm-2 control-label">Username</label>
+                <div class="col-sm-10">
+                  <input type="text" class="form-control">
+                </div>
+              </div>
+              <div class="panel-body">
+                <div class="form-group">
+                  <label class="col-sm-2 control-label">Current password</label>
+                  <div class="col-sm-10">
+                    <input type="password" class="form-control">
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label class="col-sm-2 control-label">New password</label>
+                  <div class="col-sm-10">
+                    <input type="password" class="form-control">
+                  </div>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-sm-10 col-sm-offset-2">
+                  <a class="btn btn-primary" href="management.html" role="button">Close</a>
+                  <a class="btn btn-primary" href="#" role="button">Save</a>
+                  <button class="btn btn-danger" onclick="confimation()">Delete Account</button>
+                </div>
+              </div>
+          </div>
+
+        
+
+
+        
+        <script> function confimation(){
+            if (confirm("Delete this account permanently?")) {
+                window.location.href("../../index.html");
+            } else { 
+                console.log("Delete account cancelled");
+            }
+        }</script>
+        <script> function seeMoreAlert() {
+          alert("This is where you would see more information about the car. Thanks for clicking!")
+        }</script>
+        <script> function addNewCarAlert() {
+          alert("This is where you would add a new car. Thanks for clicking!")
+        }</script>
+        <script> function editAlert() {
+          alert("This is where you would edit your car. Thanks for clicking!")
+        }</script>
+        <script> function deleteAlert() {
+          alert("This is where you would delete your car. Thanks for clicking!")
+        }</script>
+        <script> function accountAlert() {
+          alert("This is where you would view your account information. Thanks for clicking!")
+        }</script>
+        <script>
+          var name = document.cookie.split("=")[1];
+          document.getElementById("greeting").innerText = "meet your options, " + name + "!" ;
+          console.log("Greeted!");
+        </script>
+        <script src="https://kit.fontawesome.com/b52d30833a.js" crossorigin="anonymous"></script>
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    </body>
+</html>
