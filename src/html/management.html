@@ -133,8 +133,16 @@
           alert("This is where you would view your account information. Thanks for clicking!")
         }</script>
         <script>
-          var name = document.cookie.split("=")[1];
-          document.getElementById("greeting").innerText = "meet your options, " + name + "!" ;
+          var firstName;
+          var credentials = document.cookie.split("; ");
+          for (var i = 0; i < credentials.length; i++){
+            var cookieValueArray = credentials[i].split("=");
+            if (cookieValueArray[0] == "firstName"){
+                firstName = cookieValueArray[1];
+            }
+          }
+
+          document.getElementById("greeting").innerText = "meet your options, " + firstName.toLowerCase() + "!" ;
           console.log("Greeted!");
         </script>
         <script src="https://kit.fontawesome.com/b52d30833a.js" crossorigin="anonymous"></script>

@@ -33,29 +33,30 @@
                 </p>
             </div>
             <form action = "connect.php" method = "post" class = "text-center">
-                    <!-- First Name input -->
-                    <div class="form-outline mb-4">
-                        <input name = "firstName" id="firstName" placeholder="First Name" class="form-control form-inline"/>
-                    </div>
-                    
-                    <!-- Last Name input -->
-                    <div class="form-outline mb-4">
-                        <input name = "lastName" id="lastName" placeholder="Last Name" class="form-control form-inline"/>
-                    </div>
-                    
-                    <!-- Username input -->
-                    <div class="form-outline mb-4">
-                        <input name = "userName" type = "userName" id="username" placeholder="Username" class="form-control form-inline"/>
-                    </div>
+                <!-- FirstName input -->
+                <div class="form-outline mb-4">
+                    <input type="firstName" id="firstNameForm" placeholder = "First Name" class="form-control" />
+                    <label class="form-label"></label>
+                </div>
+                <!-- LastName input -->
+                <div class="form-outline mb-4">
+                    <input type="lastName" id="lastNameForm" placeholder = "Last Name" class="form-control" />
+                    <label class="form-label"></label>
+                </div>
+                <!-- Username input -->
+                <div class="form-outline mb-4">
+                    <input type="username" id="usernameForm" placeholder = "Username" class="form-control" />
+                    <label class="form-label"></label>
+                </div>
 
-                    <!-- Password input -->
-                    <div class="form-outline">
-                        <input name = "password" type="password" id="password" placeholder = "Password" class="form-control" />
-                        <label class="form-label"></label>
-                    </div>
+                <!-- Password input -->
+                <div class="form-outline mb-4">
+                    <input type="password" id="passwordForm" placeholder = "Password" class="form-control" />
+                    <label class="form-label"></label>
+                </div>
                     
                     <!-- Register buttons -->
-                    <a href = "#" type="button" class="btn btn-primary btn-block mb-4">Sign up</a>
+                    <a OnClick = "register()" type="button" class="btn btn-primary btn-block mb-4">Sign up</a>
 
                     <p>Already a member? <a id = "login" href = "index.html">Sign In</a></p>
                 </form>
@@ -64,8 +65,12 @@
 
 
         <script>
-            function registerAlert() {
-                alert("This is where you will register an account. Thanks for the click!")
+            function register() {
+                document.cookie = "firstName=" + document.getElementById("firstNameForm").value;
+                document.cookie = "lastName=" + document.getElementById("lastNameForm").value;
+                document.cookie = "username=" + document.getElementById("usernameForm").value;
+                document.cookie = "password=" + document.getElementById("passwordForm").value;
+                window.location.href = "index.html";
             }
         </script>
         <script>
