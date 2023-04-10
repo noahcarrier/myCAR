@@ -1,3 +1,11 @@
 #addCar:hover {
     cursor: pointer;
 }
+
+.fa-trash:hover {
+    cursor: pointer;
+}
+
+.editCarButton:hover {
+    cursor: pointer;
+}

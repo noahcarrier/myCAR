@@ -1,54 +1,53 @@
 document.getElementById('addCar').addEventListener('click', addCar);
 
-            
+var numCars = 0;
 
+if (document.cookie.indexOf('numCars') >= 0) {
+    numCars = parseInt(document.cookie.split('=')[1]);
+    if (numCars == 1) {
+        document.getElementById('car-entry-1').style.display = 'block';
+    } else if (numCars == 2) {
+        document.getElementById('car-entry-1').style.display = 'block';
+        document.getElementById('car-entry-2').style.display = 'block';
+    } else if (numCars == 3) {
+        document.getElementById('car-entry-1').style.display = 'block';
+        document.getElementById('car-entry-2').style.display = 'block';
+        document.getElementById('car-entry-3').style.display = 'block';
+    } else if (numCars == 4) {
+        document.getElementById('car-entry-1').style.display = 'block';
+        document.getElementById('car-entry-2').style.display = 'block';
+        document.getElementById('car-entry-3').style.display = 'block';
+        document.getElementById('car-entry-4').style.display = 'block';
+    } else if (numCars == 5) {
+        document.getElementById('car-entry-1').style.display = 'block';
+        document.getElementById('car-entry-2').style.display = 'block';
+        document.getElementById('car-entry-3').style.display = 'block';
+        document.getElementById('car-entry-4').style.display = 'block';
+        document.getElementById('car-entry-5').style.display = 'block';
+        document.getElementById('addCarContainer').style.display = 'none';
+    }
+}
 
+// add car
 function addCar() {
-    var numCars;
-    var cookieValueArray;
-    var cookies = document.cookie.split("; ");
-    for (var i = 0; i < cookies.length; i++) {
-        cookieValueArray = credentials[i].split("=");
-       
-        if (cookieValueArray[0] == "numCars"){
-            if (cookieValueArray[1] > 0) {  break;  }
-            if(isNaN(cookieValueArray[1]) || cookieValueArray[1] == "" || cookieValueArray[1] == 0 || cookieValueArray[1] == null || cookieValueArray[1] == undefined){
-                numCars = 0;
-                numCars++;
-                document.cookie = "numCars=" + numCars;
-                console.log(numCars);
-                console.log('Adding car...');   
-                console.log('You now have ' + numCars  + ' cars.');
-                return;
-            }
-        }
-    }
-
-    
-
-    console.log(cookies);
-
-    for (var j = 0; j < cookies.length; j++) {
-        cookieValueArray = credentials[j].split("=");
-       
-        if (cookieValueArray[0] == "numCars"){
-            numCars = cookieValueArray[1];
-
-        }
-    }
-
-
-    if (numCars >= 5) {
-        alert("You can't have more than 5 cars!\n\nPlease delete a car before adding a new one.");
-        return;
-    }
-
     numCars++;
+    document.cookie = "numCars=" + numCars;
 
+    if (numCars == 1) {
+        document.getElementById('car-entry-1').style.display = 'block';
+    } else if (numCars == 2) {
+        document.getElementById('car-entry-2').style.display = 'block';
+    } else if (numCars == 3) {
+        document.getElementById('car-entry-3').style.display = 'block';
+    } else if (numCars == 4) {
+        document.getElementById('car-entry-4').style.display = 'block';
+    } else if (numCars == 5) {
+        document.getElementById('car-entry-5').style.display = 'block';
+        document.getElementById('addCarContainer').style.display = 'none';
+    }
     document.cookie = "numCars=" + numCars;
     console.log('Adding car...');   
     console.log('You now have ' + numCars  + ' cars.');
     
-    //location.reload();
 }
 

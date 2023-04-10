@@ -54,39 +54,39 @@
         </p>
       </div>
 
-      <div id = "car-entry-1">
+      <div id = "car-entry-1" style = "display: none;">
         <hr>
         <div id = "car-data-1">
           <div class="row">
             <div class = "col-md-1"></div>
             <div class="col-md-2">
-              <img class = "rounded" src = "../images/exampleCar.png" alt ="car-1" width = "200px">
+              <img class = "rounded" src = "../images/blank-car.png" alt ="car-1" width = "200px">
             </div>
             <div class = "col-md-4">
               <p style = "font-size: xx-large;text-transform: uppercase;">
-                2008 VOLKSWAGEN EOS
+                YYYY MAKE MODEL
               </p>
-              <p style = "font-size: x-large;"">
-                "Blue Beetle"
-              </p>
-              <p style = "font-size: large">
-                <b>Miles:</b> 139,810
+              <p style = "font-size: x-large;">
+                "My Car"
               </p>
               <p style = "font-size: large">
-                <b>Purchased:</b> 19 July 2009
+                <b>Miles:</b> 0
+              </p>
+              <p style = "font-size: large">
+                <b>Purchased:</b> NULL
               </p>
             </div>
             <div class = "col-md-4">
               <p style = "font-size: x-large;">
-                <b>Last Updated:</b> 28 October 2021
+                <b>Last Updated:</b> NULL
               </p>
               <p style = "font-size: large">
-                <b>Miles to next oil change:</b> 1,190
+                <b>Miles to next oil change:</b> 5000
               </p>
               <a type = "button" OnClick="seeMoreAlert()" class = "btn btn-primary">See More</a>
               <div class = "mt-3 align">
-                <button style = "margin-left: 250px; background:none; border: none;" OnClick="editAlert()"><i class="fa-solid fa-pen-to-square modify-button rounded"></i></button>
-                <button style = "margin-left: 30px; background: none;border: none"  OnClick="deleteAlert()"><i class="fa-solid fa-trash modify-button rounded"></i></button>
+                <button class = "editCarButton" style = "margin-left: 250px; background:none; border: none;" OnClick = "window.location.href='editcar.html'"><i class="fa-solid fa-pen-to-square modify-button rounded"></i></button>
+                <button id = "delete-car-1" style = "margin-left: 30px; background: none;border: none"><i class="fa-solid fa-trash modify-button rounded"></i></button>
               </div>
             </div>
           </div>
@@ -125,7 +125,7 @@
               <a type = "button" OnClick="seeMoreAlert()" class = "btn btn-primary">See More</a>
               <div class = "mt-3 align">
                 <button style = "margin-left: 250px; background:none; border: none;" OnClick="editAlert()"><i class="fa-solid fa-pen-to-square modify-button rounded"></i></button>
-                <button style = "margin-left: 30px; background: none;border: none"  OnClick="deleteAlert()"><i class="fa-solid fa-trash modify-button rounded"></i></button>
+                <button id = "delete-car-2"  style = "margin-left: 30px; background: none;border: none" ><i class="fa-solid fa-trash modify-button rounded"></i></button>
               </div>
             </div>
           </div>
@@ -164,7 +164,7 @@
               <a type = "button" OnClick="seeMoreAlert()" class = "btn btn-primary">See More</a>
               <div class = "mt-3 align">
                 <button style = "margin-left: 250px; background:none; border: none;" OnClick="editAlert()"><i class="fa-solid fa-pen-to-square modify-button rounded"></i></button>
-                <button style = "margin-left: 30px; background: none;border: none"  OnClick="deleteAlert()"><i class="fa-solid fa-trash modify-button rounded"></i></button>
+                <button id = "delete-car-3"  style = "margin-left: 30px; background: none;border: none"><i class="fa-solid fa-trash modify-button rounded"></i></button>
               </div>
             </div>
           </div>
@@ -203,7 +203,7 @@
               <a type = "button" OnClick="seeMoreAlert()" class = "btn btn-primary">See More</a>
               <div class = "mt-3 align">
                 <button style = "margin-left: 250px; background:none; border: none;" OnClick="editAlert()"><i class="fa-solid fa-pen-to-square modify-button rounded"></i></button>
-                <button style = "margin-left: 30px; background: none;border: none"  OnClick="deleteAlert()"><i class="fa-solid fa-trash modify-button rounded"></i></button>
+                <button id = "delete-car-4"  style = "margin-left: 30px; background: none;border: none" ><i class="fa-solid fa-trash modify-button rounded"></i></button>
               </div>
             </div>
           </div>
@@ -242,14 +242,14 @@
               <a type = "button" OnClick="seeMoreAlert()" class = "btn btn-primary">See More</a>
               <div class = "mt-3 align">
                 <button style = "margin-left: 250px; background:none; border: none;" OnClick="editAlert()"><i class="fa-solid fa-pen-to-square modify-button rounded"></i></button>
-                <button style = "margin-left: 30px; background: none;border: none"  OnClick="deleteAlert()"><i class="fa-solid fa-trash modify-button rounded"></i></button>
+                <button id = "delete-car-5"  style = "margin-left: 30px; background: none;border: none"><i class="fa-solid fa-trash modify-button rounded"></i></button>
               </div>
             </div>
           </div>
         </div>
         <hr>
       </div>
-      <div>
+      <div id = "addCarContainer">
         <hr style = "background-color: #6FB3B8;width: 30%;">
         <div class="container text-center">
 
@@ -264,15 +264,6 @@
 
       <script> function seeMoreAlert() {
         alert("This is where you would see more information about the car. Thanks for clicking!")
-      }</script>
-      <script> function editAlert() {
-        alert("This is where you would edit your car. Thanks for clicking!")
-      }</script>
-      <script> function deleteAlert() {
-        alert("This is where you would delete your car. Thanks for clicking!")
-      }</script>
-      <script> function accountAlert() {
-        alert("This is where you would view your account information. Thanks for clicking!")
       }</script>
       <script>
         var firstName;
@@ -289,7 +280,9 @@
         document.getElementById("greeting").innerText = "meet your options, " + firstName.toLowerCase() + "!" ;
         console.log("Greeted!");
       </script>
+      <script  src = "../js/oilChange.js" rel="script" type="text/javascript"></script>
       <script src= "../js/addcar.js" rel="script" type="text/javascript"></script>
+      <script src= "../js/deletecar.js" rel="script" type="text/javascript"></script>
       <script src="https://kit.fontawesome.com/b52d30833a.js" crossorigin="anonymous"></script>
       <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
       <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
