@@ -2,6 +2,7 @@
 
 nav {
     background-color: #388087;
+    width: 100%;
 }
 
 .btn-primary {
@@ -26,6 +27,7 @@ hr {
 
 body {
     background-color: #f2fcf5;
+    width: auto;
 }
 
 .display-3, .display-2, .display-1 {
