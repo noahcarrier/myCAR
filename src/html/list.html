@@ -17,170 +17,146 @@
 
   </head>
   <body>
-
-    <div>
-      <nav class="navbar navbar-expand-lg navbar-dark">
-                <a class="navbar-brand" href="../../index.html">myCAR</a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                  <span class="navbar-toggler-icon"></span>
-                </button>
-              
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                  <ul class="navbar-nav ml-auto">
-                    <li class="nav-item active">
-                      <a class="nav-link" href="management.html">myMANAGER <span class="sr-only">(current)</span></a>
-                    </li>
-                    <li class="nav-item active">
-                      <a class="nav-link"> |  <span class="sr-only">(current)</span></a>
-                    </li>
-                    <li class="nav-item active">
-                        <a class="nav-link" href="diy.html">myDIY <span class="sr-only">(current)</span></a>
-                    </li>
-                    <li class="nav-item active">
-                        <a class="nav-link"> |  <span class="sr-only">(current)</span></a>
-                    </li>
-                    <li class="nav-item active">
-                        <a class="nav-link" href="list.html">myLIST <span class="sr-only">(current)</span></a>
-                    </li>
-                    <li class="nav-item active">
-                      <a class="nav-link"> |  <span class="sr-only">(current)</span></a>
-                    </li>
-                    <li class="nav-item active">
-                      <a class="nav-link" href="shops.html">mySHOPS <span class="sr-only">(current)</span></a>
-                    </li>
-                    <li class="nav-item active">
-                      <a class="nav-link"> |  <span class="sr-only">(current)</span></a>
-                    </li>
-                    <li class="nav-item dropdown active">
-                      <a class="nav-link dropdown-toggle active" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">myACCOUNT</a>
-                      <div class="dropdown-menu">
-                          <a class="dropdown-item" href = "editaccount.html">Edit Account</a>
-                          <div class="dropdown-divider"></div>
-                          <a class="dropdown-item" href = "../../index.html">Logout</a>
-                      </div>
-                    </li>
-                  </ul>
-                </div>
-              </nav>
+    <nav class="navbar navbar-expand-lg navbar-dark">
+      <a style = "color: white;" class="navbar-brand">myCAR</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item active">
+            <a class="nav-link mr-3" href="management.html">myMANAGER</a>
+          </li>
+          <li class="nav-item active">
+              <a class="nav-link mr-3" href="diy.html">myDIY</a>
+          </li>
+          <li class="nav-item active">
+              <a class="nav-link mr-3" href="list.html">myLIST</a>
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link mr-3" href="shops.html">mySHOPS</a>
+          </li>
+          <li class="nav-item dropdown active">
+            <a class="nav-link dropdown-toggle active" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">myACCOUNT</a>
+            <div class="dropdown-menu">
+                <a class="dropdown-item" href = "editaccount.html">Edit Account</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href = "../../index.html">Logout</a>
+            </div>
+          </li>
+        </ul>
       </div>
     </nav>
-
-
     <h3 class = "text-center mt-3 display-1">myLIST</h3>
     <p class = "fs-2 text-center font-italic" style = "font-size: x-large;">
       list the items you need
     </p>
     <div class = "container">
-    
-	
+      <table align='center' cellspacing=2 cellpadding=1 id="data_table" border = 1>
+        <tr>
+          <th>Item</th>
+          <th><a href="price.html" style="color:black">Price</a></th>
+          <th>Link</th>
+        </tr>
 
-	
-	
-<table align='center' cellspacing=2 cellpadding=1 id="data_table" border=1>
-<tr>
-<th>Item</th>
-<th><a href="price.html" style="color:black">Price</a></th>
-<th>Link</th>
-</tr>
+        <tr id="row1">
+          <td id="item_row1">Headlights</td>
+          <td id="price_row1">$29.59</td>
+          <td id="link_row1">https://a.co/d/4ehLNw5</td>
+          <td>
+          <input type="button" id="edit_button1" value="Edit" class="btn btn-primary mb-4" onclick="edit_row('1')">
+          <input type="button" id="save_button1" value="Save" class="btn btn-primary mb-4" onclick="save_row('1')">
+          <br>
+          <input type="button" value="Delete" class="btn btn-primary mb-4" onclick="delete_row('1')">
+          </td>
+        </tr>
 
-<tr id="row1">
-<td id="item_row1">Headlights</td>
-<td id="price_row1">$29.59</td>
-<td id="link_row1">https://a.co/d/4ehLNw5</td>
-<td>
-<input type="button" id="edit_button1" value="Edit" class="btn btn-primary mb-4" onclick="edit_row('1')">
-<input type="button" id="save_button1" value="Save" class="btn btn-primary mb-4" onclick="save_row('1')">
-<br>
-<input type="button" value="Delete" class="btn btn-primary mb-4" onclick="delete_row('1')">
-</td>
-</tr>
+        <tr id="row2">
+          <td id="item_row2">Tires</td>
+          <td id="price_row2">$119.99</td>
+          <td id="link_row2">https://a.co/d/dCQfWcO</td>
+          <td>
+          <input type="button" id="edit_button2" value="Edit" class="btn btn-primary mb-4" onclick="edit_row('2')">
+          <input type="button" id="save_button2" value="Save" class="btn btn-primary mb-4" onclick="save_row('2')">
+          <br>
+          <input type="button" value="Delete" class="btn btn-primary mb-4" onclick="delete_row('2')">
+          </td>
+        </tr>
 
-<tr id="row2">
-<td id="item_row2">Tires</td>
-<td id="price_row2">$119.99</td>
-<td id="link_row2">https://a.co/d/dCQfWcO</td>
-<td>
-<input type="button" id="edit_button2" value="Edit" class="btn btn-primary mb-4" onclick="edit_row('2')">
-<input type="button" id="save_button2" value="Save" class="btn btn-primary mb-4" onclick="save_row('2')">
-<br>
-<input type="button" value="Delete" class="btn btn-primary mb-4" onclick="delete_row('2')">
-</td>
-</tr>
+        <tr id="row3">
+          <td id="item_row3">Motor Oil</td>
+          <td id="price_row3">$26.97</td>
+          <td id="link_row3">https://a.co/d/8Vwp1ik</td>
+          <td>
+          <input type="button" id="edit_button3" value="Edit" class="btn btn-primary mb-4" onclick="edit_row('3')">
+          <input type="button" id="save_button3" value="Save" class="btn btn-primary mb-4" onclick="save_row('3')">
+          <br>
+          <input type="button" value="Delete" class="btn btn-primary mb-4" onclick="delete_row('3')">
+          </td>
+        </tr>
 
-<tr id="row3">
-<td id="item_row3">Motor Oil</td>
-<td id="price_row3">$26.97</td>
-<td id="link_row3">https://a.co/d/8Vwp1ik</td>
-<td>
-<input type="button" id="edit_button3" value="Edit" class="btn btn-primary mb-4" onclick="edit_row('3')">
-<input type="button" id="save_button3" value="Save" class="btn btn-primary mb-4" onclick="save_row('3')">
-<br>
-<input type="button" value="Delete" class="btn btn-primary mb-4" onclick="delete_row('3')">
-</td>
-</tr>
+        <tr>
+          <td><input type="text" id="new_item"></td>
+          <td><input type="text" id="new_price"></td>
+          <td><input type="text" id="new_link"></td>
+          <td><input type="button" class="btn btn-primary mb-4" onclick="add_row();" value="Add Row"></td>
+        </tr>
 
-<tr>
-<td><input type="text" id="new_item"></td>
-<td><input type="text" id="new_price"></td>
-<td><input type="text" id="new_link"></td>
-<td><input type="button" class="btn btn-primary mb-4" onclick="add_row();" value="Add Row"></td>
-</tr>
+      </table>
+    </div>
+    <script>
+      function edit_row(no)
+      {
+        document.getElementById("edit_button"+no).style.display="none";
+        document.getElementById("save_button"+no).style.display="block";
+          
+        var item=document.getElementById("item_row"+no);
+        var price=document.getElementById("price_row"+no);
+        var link=document.getElementById("link_row"+no);
+          
+        var item_data=item.innerHTML;
+        var price_data=price.innerHTML;
+        var link_data=link.innerHTML;
+          
+        item.innerHTML="<input type='text' id='item_text"+no+"' value='"+item_data+"'>";
+        price.innerHTML="<input type='text' id='price_text"+no+"' value='"+price_data+"'>";
+        link.innerHTML="<input type='text' id='link_text"+no+"' value='"+link_data+"'>";
+      }
 
-</table>
-</div>
-<script>
-function edit_row(no)
-{
- document.getElementById("edit_button"+no).style.display="none";
- document.getElementById("save_button"+no).style.display="block";
-	
- var item=document.getElementById("item_row"+no);
- var price=document.getElementById("price_row"+no);
- var link=document.getElementById("link_row"+no);
-	
- var item_data=item.innerHTML;
- var price_data=price.innerHTML;
- var link_data=link.innerHTML;
-	
- item.innerHTML="<input type='text' id='item_text"+no+"' value='"+item_data+"'>";
- price.innerHTML="<input type='text' id='price_text"+no+"' value='"+price_data+"'>";
- link.innerHTML="<input type='text' id='link_text"+no+"' value='"+link_data+"'>";
-}
+      function save_row(no)
+      {
+        var item_val=document.getElementById("item_text"+no).value;
+        var price_val=document.getElementById("price_text"+no).value;
+        var link_val=document.getElementById("link_text"+no).value;
 
-function save_row(no)
-{
- var item_val=document.getElementById("item_text"+no).value;
- var price_val=document.getElementById("price_text"+no).value;
- var link_val=document.getElementById("link_text"+no).value;
+        document.getElementById("item_row"+no).innerHTML=item_val;
+        document.getElementById("price_row"+no).innerHTML=price_val;
+        document.getElementById("link_row"+no).innerHTML=link_val;
 
- document.getElementById("item_row"+no).innerHTML=item_val;
- document.getElementById("price_row"+no).innerHTML=price_val;
- document.getElementById("link_row"+no).innerHTML=link_val;
+        document.getElementById("edit_button"+no).style.display="block";
+        document.getElementById("save_button"+no).style.display="none";
+      }
 
- document.getElementById("edit_button"+no).style.display="block";
- document.getElementById("save_button"+no).style.display="none";
-}
+      function delete_row(no)
+      {
+        document.getElementById("row"+no+"").outerHTML="";
+      }
 
-function delete_row(no)
-{
- document.getElementById("row"+no+"").outerHTML="";
-}
+      function add_row()
+      {
+        var new_item=document.getElementById("new_item").value;
+        var new_price=document.getElementById("new_price").value;
+        var new_link=document.getElementById("new_link").value;
+          
+        var table=document.getElementById("data_table");
+        var table_len=(table.rows.length)-1;
+        var row = table.insertRow(table_len).outerHTML="<tr id='row"+table_len+"'><td id='item_row"+table_len+"'>"+new_item+"</td><td id='price_row"+table_len+"'>"+new_price+"</td><td id='link_row"+table_len+"'>"+new_link+"</td><td><input type='button' id='edit_button"+table_len+"' value='Edit' class='btn btn-primary mb-4' onclick='edit_row("+table_len+")'><input type='button' id='save_button"+table_len+"' value='Save' class='btn btn-primary mb-4' onclick='save_row("+table_len+")'><br><input type='button' value='Delete' class='btn btn-primary mb-4' onclick='delete_row("+table_len+")'></td></tr>";
 
-function add_row()
-{
- var new_item=document.getElementById("new_item").value;
- var new_price=document.getElementById("new_price").value;
- var new_link=document.getElementById("new_link").value;
-	
- var table=document.getElementById("data_table");
- var table_len=(table.rows.length)-1;
- var row = table.insertRow(table_len).outerHTML="<tr id='row"+table_len+"'><td id='item_row"+table_len+"'>"+new_item+"</td><td id='price_row"+table_len+"'>"+new_price+"</td><td id='link_row"+table_len+"'>"+new_link+"</td><td><input type='button' id='edit_button"+table_len+"' value='Edit' class='btn btn-primary mb-4' onclick='edit_row("+table_len+")'><input type='button' id='save_button"+table_len+"' value='Save' class='btn btn-primary mb-4' onclick='save_row("+table_len+")'><br><input type='button' value='Delete' class='btn btn-primary mb-4' onclick='delete_row("+table_len+")'></td></tr>";
-
- document.getElementById("new_item").value="";
- document.getElementById("new_price").value="";
- document.getElementById("new_link").value="";
-}
-</script>
+        document.getElementById("new_item").value="";
+        document.getElementById("new_price").value="";
+        document.getElementById("new_link").value="";
+      }
+    </script>
 
     <script src="https://kit.fontawesome.com/b52d30833a.js" crossorigin="anonymous"></script>
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
