@@ -45,7 +45,6 @@ function addCar() {
         document.getElementById('car-entry-5').style.display = 'block';
         document.getElementById('addCarContainer').style.display = 'none';
     }
-    document.cookie = "numCars=" + numCars;
     console.log('Adding car...');   
     console.log('You now have ' + numCars  + ' cars.');
     
