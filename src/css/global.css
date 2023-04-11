@@ -53,3 +53,7 @@ body {
 a {
     color: #388087;
 }
+
+#logoutbtn:hover {
+    cursor: pointer;
+}

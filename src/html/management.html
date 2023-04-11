@@ -41,7 +41,7 @@
               <div class="dropdown-menu">
                   <a class="dropdown-item" href = "editaccount.html">Edit Account</a>
                   <div class="dropdown-divider"></div>
-                  <a class="dropdown-item" href = "../../index.html">Logout</a>
+                  <a id = "logoutbtn" class="dropdown-item" OnClick = "logout();">Logout</a>
               </div>
             </li>
           </ul>
@@ -280,6 +280,7 @@
         document.getElementById("greeting").innerText = "meet your options, " + firstName.toLowerCase() + "!" ;
         console.log("Greeted!");
       </script>
+      <script src = "../js/logout.js" rel="script" type="text/javascript"></script>
       <script  src = "../js/oilChange.js" rel="script" type="text/javascript"></script>
       <script src= "../js/addcar.js" rel="script" type="text/javascript"></script>
       <script src= "../js/deletecar.js" rel="script" type="text/javascript"></script>

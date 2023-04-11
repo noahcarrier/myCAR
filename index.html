@@ -64,27 +64,43 @@
                     return;
                 }
                 var credentials;
-               
+                var existsUsername = false;
+                var existsPassword = false;
                 credentials = document.cookie.split("; ");
-                
                 for (var i = 0; i < credentials.length; i++){
                     var cookieValueArray = credentials[i].split("=");
-                   
                     if (cookieValueArray[0] == "username"){
-                        if (cookieValueArray[1] != document.getElementById("usernameForm").value){
-                            alert("Incorrect username or password");
-                            return;
-                        }
+                        existsUsername = true;
                     }
-                    if (cookieValueArray[0] == "password"){
-                        if (cookieValueArray[1] != document.getElementById("passwordForm").value){
-                            alert("Incorrect username or password");
-                            return;
+                    else if (cookieValueArray[0] == "password"){
+                        existsPassword = true;
+                    }
+                }
+                if (existsUsername && existsPassword) {
+                    for (var i = 0; i < credentials.length; i++){
+                        var cookieValueArray = credentials[i].split("=");
+                    
+                        if (cookieValueArray[0] == "username"){
+                            if (cookieValueArray[1] != document.getElementById("usernameForm").value){
+                                alert("Incorrect username or password");
+                                return;
+                            }
+                        }
+                        else if (cookieValueArray[0] == "password"){
+                            if (cookieValueArray[1] != document.getElementById("passwordForm").value){
+                                alert("Incorrect username or password");
+                                return;
+                            }
+                        }
+                        else {
+                            window.location.href = "src/html/management.html";
                         }
                     }
                 }
-                
-                window.location.href = "src/html/management.html";
+                else {
+                    alert("Incorrect username or password");
+                    return;
+                }
             }
         </script>
         <script src="https://kit.fontawesome.com/b52d30833a.js" crossorigin="anonymous"></script>
