@@ -9,7 +9,7 @@ var numCars = (document.cookie.indexOf('numCars') >= 0) ? parseInt(document.cook
       // check if the user has granted permission for notifications
     if (milesToNextOilChange >= 5000 && numCars > 0) {
 
-        alert("You've hit another 5000 miles, time to get an oil change!");
+        alert("Looks like you may be due for an oil change!\n--------------------------------------------\nPlease update your miles to next oil change in your car's details once you've had your oil changed.");
     }
   } 
 
