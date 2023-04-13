@@ -5,7 +5,7 @@ function deleteAccount () {
         eraseCookieFromAllPaths("lastName");
         eraseCookieFromAllPaths("firstName");
         eraseCookieFromAllPaths("numCars");
-        window.location.href = "../../index.html";
+        window.location.href = "index.html";
     } else { 
         console.log("Delete account cancelled");
     }
