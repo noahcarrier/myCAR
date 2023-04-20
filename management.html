@@ -60,32 +60,32 @@
           <div class="row">
             <div class = "col-md-1"></div>
             <div class="col-md-2">
-              <img class = "rounded" src = "../images/blank-car.png" alt ="car-1" width = "200px">
+              <img class = "rounded" src = "src/images/blank-car.png" alt ="car-1" width = "200px">
             </div>
             <div class = "col-md-4">
               <p style = "font-size: xx-large;text-transform: uppercase;">
-                YYYY MAKE MODEL
+                <span id = "car1year">YYYY</span>&nbsp;<span id = "car1make">MAKE</span>&nbsp;<span id = "car1model">MODEL</span>
               </p>
               <p style = "font-size: x-large;">
-                "My Car"
+                <span>"</span><span id = "car1name">My Car</span><span>"</span>
               </p>
               <p style = "font-size: large">
-                <b>Miles:</b> 0
+                <b>Miles: </b><span id = "car1miles">0</span>
               </p>
               <p style = "font-size: large">
-                <b>Purchased:</b> NULL
+                <b>Purchased: </b><span id = "car1purchased">N/A</span>
               </p>
             </div>
             <div class = "col-md-4">
               <p style = "font-size: x-large;">
-                <b>Last Updated:</b> NULL
+                <b>Last Updated: </b><span id = "car1updated">N/A</span>
               </p>
               <p style = "font-size: large">
-                <b>Miles to next oil change:</b> 5000
+                <b>Miles to next oil change: </b><span id = "car1nextoilchange">0</span>
               </p>
               <a type = "button" href = "history.html"  class = "btn btn-primary">History</a>
               <div class = "mt-3 align">
-                <button class = "editCarButton" style = "margin-left: 250px; background:none; border: none;" OnClick = "window.location.href='editcar.html'"><i class="fa-solid fa-pen-to-square modify-button rounded"></i></button>
+                <button class = "editCarButton" style = "margin-left: 250px; background:none; border: none;" OnClick = "window.location.href='editcar-1.html'"><i class="fa-solid fa-pen-to-square modify-button rounded"></i></button>
                 <button id = "delete-car-1" style = "margin-left: 30px; background: none;border: none"><i class="fa-solid fa-trash modify-button rounded"></i></button>
               </div>
             </div>
@@ -99,7 +99,7 @@
           <div class="row">
             <div class = "col-md-1"></div>
             <div class="col-md-2">
-              <img class = "rounded" src = "../images/blank-car.png" alt ="car-2" width = "200px">
+              <img class = "rounded" src = "src/images/blank-car.png" alt ="car-2" width = "200px">
             </div>
             <div class = "col-md-4">
               <p style = "font-size: xx-large;text-transform: uppercase;">
@@ -124,7 +124,7 @@
               </p>
               <a type = "button" href = "history.html"  class = "btn btn-primary">History</a>
               <div class = "mt-3 align">
-                <button style = "margin-left: 250px; background:none; border: none;" OnClick="editAlert()"><i class="fa-solid fa-pen-to-square modify-button rounded"></i></button>
+                <button style = "margin-left: 250px; background:none; border: none;" OnClick = "editThisCar(2);"><i class="fa-solid fa-pen-to-square modify-button rounded"></i></button>
                 <button id = "delete-car-2"  style = "margin-left: 30px; background: none;border: none" ><i class="fa-solid fa-trash modify-button rounded"></i></button>
               </div>
             </div>
@@ -138,7 +138,7 @@
           <div class="row">
             <div class = "col-md-1"></div>
             <div class="col-md-2">
-              <img class = "rounded" src = "../images/blank-car.png" alt ="car-2" width = "200px">
+              <img class = "rounded" src = "src/images/blank-car.png" alt ="car-3" width = "200px">
             </div>
             <div class = "col-md-4">
               <p style = "font-size: xx-large;text-transform: uppercase;">
@@ -163,7 +163,7 @@
               </p>
               <a type = "button" href = "history.html"  class = "btn btn-primary">History</a>
               <div class = "mt-3 align">
-                <button style = "margin-left: 250px; background:none; border: none;" OnClick="editAlert()"><i class="fa-solid fa-pen-to-square modify-button rounded"></i></button>
+                <button style = "margin-left: 250px; background:none; border: none;" OnClick = "editThisCar(3);"><i class="fa-solid fa-pen-to-square modify-button rounded"></i></button>
                 <button id = "delete-car-3"  style = "margin-left: 30px; background: none;border: none"><i class="fa-solid fa-trash modify-button rounded"></i></button>
               </div>
             </div>
@@ -177,7 +177,7 @@
           <div class="row">
             <div class = "col-md-1"></div>
             <div class="col-md-2">
-              <img class = "rounded" src = "../images/blank-car.png" alt ="car-2" width = "200px">
+              <img class = "rounded" src = "src/images/blank-car.png" alt ="car-4" width = "200px">
             </div>
             <div class = "col-md-4">
               <p style = "font-size: xx-large;text-transform: uppercase;">
@@ -202,7 +202,7 @@
               </p>
               <a type = "button" href = "history.html"  class = "btn btn-primary">History</a>
               <div class = "mt-3 align">
-                <button style = "margin-left: 250px; background:none; border: none;" OnClick="editAlert()"><i class="fa-solid fa-pen-to-square modify-button rounded"></i></button>
+                <button style = "margin-left: 250px; background:none; border: none;" OnClick = "editThisCar(4);"><i class="fa-solid fa-pen-to-square modify-button rounded"></i></button>
                 <button id = "delete-car-4"  style = "margin-left: 30px; background: none;border: none" ><i class="fa-solid fa-trash modify-button rounded"></i></button>
               </div>
             </div>
@@ -216,7 +216,7 @@
           <div class="row">
             <div class = "col-md-1"></div>
             <div class="col-md-2">
-              <img class = "rounded" src = "../images/blank-car.png" alt ="car-2" width = "200px">
+              <img class = "rounded" src = "src/images/blank-car.png" alt ="car-5" width = "200px">
             </div>
             <div class = "col-md-4">
               <p style = "font-size: xx-large;text-transform: uppercase;">
@@ -241,7 +241,7 @@
               </p>
               <a type = "button" href = "history.html"  class = "btn btn-primary">History</a>
               <div class = "mt-3 align">
-                <button style = "margin-left: 250px; background:none; border: none;" OnClick="editAlert()"><i class="fa-solid fa-pen-to-square modify-button rounded"></i></button>
+                <button style = "margin-left: 250px; background:none; border: none;" OnClick = "editThisCar(5);"><i class="fa-solid fa-pen-to-square modify-button rounded"></i></button>
                 <button id = "delete-car-5"  style = "margin-left: 30px; background: none;border: none"><i class="fa-solid fa-trash modify-button rounded"></i></button>
               </div>
             </div>
@@ -262,9 +262,7 @@
 
 
 
-      <script> function seeMoreAlert() {
-        alert("This is where you would History information about the car. Thanks for clicking!")
-      }</script>
+  
       <script>
         var firstName;
         var credentials = document.cookie.split("; ");
@@ -278,8 +276,38 @@
           firstName = "User";
         }
         document.getElementById("greeting").innerText = "meet your options, " + firstName.toLowerCase() + "!" ;
-        console.log("Greeted!");
+        //console.log("Greeted!");
       </script>
+      <!-- <script>
+        function editThisCar (carNumber) {
+          // add carNumber to cookies
+          document.cookie = "currentCar=" + carNumber;
+
+          // redirect to edit car page
+          window.location.href = "editcar.html";
+
+        }
+      </script> -->
+      <!-- script to fix numCars bug -->
+      <script>
+        //console.log("numCars bug fix");
+        var numCars;
+        var credentials = document.cookie.split("; ");
+        for (var i = 0; i < credentials.length; i++){
+            var cookieValueArray = credentials[i].split("=");
+        
+            if (cookieValueArray[0] == "numCars"){
+                numCars = cookieValueArray[1]
+                //console.log("numCars = " + numCars)
+            }
+        }
+        if (numCars == null || isNaN(numCars)){
+            numCars = 0;
+            //console.log("numCars = " + numCars)
+
+        }
+      </script>
+      <script src = "src/js/loadcars.js" rel="script" type="text/javascript"></script>
       <script src = "src/js/logout.js" rel="script" type="text/javascript"></script>
       <script  src = "src/js/oilChange.js" rel="script" type="text/javascript"></script>
       <script src= "src/js/addcar.js" rel="script" type="text/javascript"></script>
