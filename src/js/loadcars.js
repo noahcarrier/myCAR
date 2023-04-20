@@ -1,23 +1,55 @@
 console.log("Loading cars...")
 
-for (var i = 1; i <= parseInt(getNumCars()); i++) {
-    document.getElementById("car-entry-" + i).style.display = "block";
-    document.getElementById("car1name").innerHTML = getCarName(i);
-    //console.log(getCarName(1));
-    document.getElementById("car1make").innerHTML = getCarMake(i);
-    //console.log(getCarMake(1));
-    document.getElementById("car1model").innerHTML = getCarModel(i);
-    //console.log(getCarModel(1));
-    document.getElementById("car1year").innerHTML = getCarYear(i);
-    //console.log(getCarYear(1));
-    document.getElementById("car1miles").innerHTML = getCarMiles(i);
-    //console.log(getCarMiles(1));
-    document.getElementById("car1nextoilchange").innerHTML = getCarNextOilChange(i);
-    //console.log(getCarNextOilChange(1));
-    document.getElementById("car1purchased").innerHTML = getCarPurchased(i);
-    //console.log(getCarPurchased(1));
-    console.log("Loaded car " + getCarName(i));
-}
+
+    document.getElementById("car-entry-1").style.display = "block";
+    document.getElementById("car1name").innerHTML = getCarName(1).toString();
+    document.getElementById("car1make").innerHTML = getCarMake(1).toString();
+    document.getElementById("car1model").innerHTML = getCarModel(1).toString();
+    document.getElementById("car1year").innerHTML = getCarYear(1).toString();
+    document.getElementById("car1miles").innerHTML = getCarMiles(1).toString();
+    document.getElementById("car1nextoilchange").innerHTML = getCarNextOilChange(1).toString();
+    document.getElementById("car1purchased").innerHTML = getCarPurchased(1).toString();
+    console.log("Loaded car 1");
+
+    document.getElementById("car-entry-2").style.display = "block";
+    document.getElementById("car2name").innerHTML = getCarName(2).toString();
+    document.getElementById("car2make").innerHTML = getCarMake(2).toString();
+    document.getElementById("car2model").innerHTML = getCarModel(2).toString();
+    document.getElementById("car2year").innerHTML = getCarYear(2).toString();
+    document.getElementById("car2miles").innerHTML = getCarMiles(2).toString();
+    document.getElementById("car2nextoilchange").innerHTML = getCarNextOilChange(2).toString();
+    document.getElementById("car2purchased").innerHTML = getCarPurchased(2).toString();
+    console.log("Loaded car 2");
+
+    document.getElementById("car-entry-3").style.display = "block";
+    document.getElementById("car3name").innerHTML = getCarName(3).toString();
+    document.getElementById("car3make").innerHTML = getCarMake(3).toString();
+    document.getElementById("car3model").innerHTML = getCarModel(3).toString();
+    document.getElementById("car3year").innerHTML = getCarYear(3).toString();
+    document.getElementById("car3miles").innerHTML = getCarMiles(3).toString();
+    document.getElementById("car3nextoilchange").innerHTML = getCarNextOilChange(3).toString();
+    document.getElementById("car3purchased").innerHTML = getCarPurchased(3).toString();
+    console.log("Loaded car 3");
+
+    document.getElementById("car-entry-4").style.display = "block";
+    document.getElementById("car4name").innerHTML = getCarName(4).toString();
+    document.getElementById("car4make").innerHTML = getCarMake(4).toString();
+    document.getElementById("car4model").innerHTML = getCarModel(4).toString();
+    document.getElementById("car4year").innerHTML = getCarYear(4).toString();
+    document.getElementById("car4miles").innerHTML = getCarMiles(4).toString();
+    document.getElementById("car4nextoilchange").innerHTML = getCarNextOilChange(4).toString();
+    document.getElementById("car4purchased").innerHTML = getCarPurchased(4).toString();
+    console.log("Loaded car 4");
+
+    document.getElementById("car-entry-5").style.display = "block";
+    document.getElementById("car5name").innerHTML = getCarName(5).toString();
+    document.getElementById("car5make").innerHTML = getCarMake(5).toString();
+    document.getElementById("car5model").innerHTML = getCarModel(5).toString();
+    document.getElementById("car5year").innerHTML = getCarYear(5).toString();
+    document.getElementById("car5miles").innerHTML = getCarMiles(5).toString();
+    document.getElementById("car5nextoilchange").innerHTML = getCarNextOilChange(5).toString();
+    document.getElementById("car5purchased").innerHTML = getCarPurchased(5).toString();
+    console.log("Loaded car 5");
 
 if (getNumCars() == "NaN") {
     document.cookie = "numCars=0";
