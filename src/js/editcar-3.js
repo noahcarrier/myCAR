@@ -7,21 +7,41 @@ function editcar() {
     var carMiles = document.getElementById("carMiles").value;
     var carNextOilChange = document.getElementById("carNextOilChange").value;
 
-    // set car1 name
-    document.cookie = "car3Name=" + carName;
+    if (carName != "") {
+        // set car1 name
+        document.cookie = "car3Name=" + carName;
+    }
+    if (carMake != "") {
     // set car1 make
     document.cookie = "car3Make=" + carMake;
-    // set car1 model
-    document.cookie = "car3Model=" + carModel;
-    // set car1 year
-    document.cookie = "car3Year=" + carYear;
-    // set car1 purchased
-    document.cookie = "car3Purchased=" + carPurchased;
-    // set car1 miles
-    document.cookie = "car3Miles=" + carMiles;
-    // set car1 next oil change
-    document.cookie = "car3NextOilChange=" + carNextOilChange;
+    }
+    if (carModel != "") {
+        // set car1 model
+        document.cookie = "car3Model=" + carModel;
+    }
+    if (carYear != "") {
+        // set car1 year
+        document.cookie = "car3Year=" + carYear;
+    }
+    if (carPurchased != "") {
+        // set car1 purchased
+        document.cookie = "car3Purchased=" + carPurchased;
+    }
+    if (carMiles != "") {
+        // set car1 miles
+        document.cookie = "car3Miles=" + carMiles;
+    }
+    if (carNextOilChange != "") {
+        // set car1 next oil change
+        document.cookie = "car3NextOilChange=" + carNextOilChange;
+    }
 
+    // get current date
+    var currentDate = new Date().toLocaleString();
+
+
+    // set car last updated
+    document.cookie = "car3LastUpdated=" + currentDate;
 
     alert("Car details updated");
 }
