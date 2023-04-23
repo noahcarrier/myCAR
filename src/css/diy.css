@@ -1,0 +1,15 @@
+.diy-card {
+    margin-left: auto;
+    margin-right: auto;
+    width: 30%;
+    height: 50%;
+    display: block
+}
+
+.diy-title {
+    font-size: 1.5em;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 0.5em;
+    color: #275e62;
+}
