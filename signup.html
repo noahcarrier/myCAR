@@ -33,37 +33,33 @@
             </div>
             <form action = "connect.php" method = "post">
                 <!-- FirstName input -->
-                <div class="form-outline mb-4">
-                    <label class="form-label">First Name</label>
-                    <input type="firstName" id="firstNameForm" placeholder = "" class="form-control" />
+                <div class="form-outline m-4">
+                    <input type="firstName" id="firstNameForm" placeholder = "First Name" class="form-control" />
                 </div>
                 <!-- LastName input -->
-                <div class="form-outline mb-4">
-                    <label class="form-label align-self-start">Last Name</label>
-                    <input type="lastName" id="lastNameForm" placeholder = "" class="form-control" />
+                <div class="form-outline m-4">
+                    <input type="lastName" id="lastNameForm" placeholder = "Last Name" class="form-control" />
                 </div>
                 <!-- Username input -->
-                <div class="form-outline mb-4">
-                    <label class="form-label">Username</label>
-                    <input type="username" id="usernameForm" placeholder = "" class="form-control" />
+                <div class="form-outline m-4">
+                    <input type="username" id="usernameForm" placeholder = "Username" class="form-control" />
                 </div>
-
                 <!-- Password input -->
-                <div class="form-outline mb-4">
-                    <label class="form-label">Password </label> <span class = "ml-3 text-danger" id = "warning"></span>
-                    <input type="password" id="passwordForm" placeholder = "" class="form-control password" />
+                <div class="form-outline m-4">
+                    <input type="password" id="passwordForm" placeholder = "Password" class="form-control password" />
                 </div>
 
                 <!-- Confirm password input -->
-                <div class="form-outline mb-4">
-                    <label class="form-label">Confirm Password</label>
-                    <input type="password" id="passwordConfirmForm" placeholder = "" class="form-control password" />
+                <div class="form-outline m-4">
+                    <input type="password" id="passwordConfirmForm" placeholder = "Confirm Password" class="form-control password" />
                 </div>
+                <span class = "ml-3 text-danger" id = "warning"></span>
+
                     
                     <!-- Register buttons -->
-                    <a OnClick = "register()" type="button" class="btn btn-primary btn-block mb-4">Sign up</a>
+                    <a OnClick = "register()" type="button" style = "width: 10%;margin: auto;" class="btn btn-primary btn-block text-white">Sign up</a>
 
-                    <p>Already a member? <a id = "login" href = "index.html">Sign In</a></p>
+                    <p class = "m-4 text-center">Already a member? <a id = "login" href = "index.html">Sign In</a></p>
                 </form>
         </div>
 
