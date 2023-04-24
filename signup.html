@@ -14,7 +14,6 @@
             <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
             <link href="src/css/global.css" rel="stylesheet">
             <link href="src/css/index.css" rel="stylesheet">
-            <link href="src/css/signup.css" rel="stylesheet">
     </head>
     <body>
         <div>
@@ -32,27 +31,33 @@
                     nice to meet you
                 </p>
             </div>
-            <form action = "connect.php" method = "post" class = "text-center">
+            <form action = "connect.php" method = "post">
                 <!-- FirstName input -->
                 <div class="form-outline mb-4">
-                    <input type="firstName" id="firstNameForm" placeholder = "First Name" class="form-control" />
-                    <label class="form-label"></label>
+                    <label class="form-label">First Name</label>
+                    <input type="firstName" id="firstNameForm" placeholder = "" class="form-control" />
                 </div>
                 <!-- LastName input -->
                 <div class="form-outline mb-4">
-                    <input type="lastName" id="lastNameForm" placeholder = "Last Name" class="form-control" />
-                    <label class="form-label"></label>
+                    <label class="form-label align-self-start">Last Name</label>
+                    <input type="lastName" id="lastNameForm" placeholder = "" class="form-control" />
                 </div>
                 <!-- Username input -->
                 <div class="form-outline mb-4">
-                    <input type="username" id="usernameForm" placeholder = "Username" class="form-control" />
-                    <label class="form-label"></label>
+                    <label class="form-label">Username</label>
+                    <input type="username" id="usernameForm" placeholder = "" class="form-control" />
                 </div>
 
                 <!-- Password input -->
                 <div class="form-outline mb-4">
-                    <input type="password" id="passwordForm" placeholder = "Password" class="form-control" />
-                    <label class="form-label"></label>
+                    <label class="form-label">Password </label> <span class = "ml-3 text-danger" id = "warning"></span>
+                    <input type="password" id="passwordForm" placeholder = "" class="form-control password" />
+                </div>
+
+                <!-- Confirm password input -->
+                <div class="form-outline mb-4">
+                    <label class="form-label">Confirm Password</label>
+                    <input type="password" id="passwordConfirmForm" placeholder = "" class="form-control password" />
                 </div>
                     
                     <!-- Register buttons -->
@@ -63,61 +68,71 @@
         </div>
 
 
-
         <script>
             function register() {
-                document.cookie = "firstName=" + document.getElementById("firstNameForm").value;
-                document.cookie = "lastName=" + document.getElementById("lastNameForm").value;
-                document.cookie = "username=" + document.getElementById("usernameForm").value;
-                document.cookie = "password=" + document.getElementById("passwordForm").value;
-                document.cookie = "numCars=0";
-                
-                document.cookie = "car1Name=MYCAR";
-                document.cookie = "car1Make=MAKE";
-                document.cookie = "car1Model=MODEL";
-                document.cookie = "car1Year=0000";
-                document.cookie = "car1Miles=0";
-                document.cookie = "car1NextOilChange=5000";
-                document.cookie = "car1Purchased=0000";
-                document.cookie = "car1LastUpdated="
+                if (document.getElementById("passwordForm").value == "" || document.getElementById("passwordConfirmForm").value == "" || document.getElementById("usernameForm").value == "" || document.getElementById("firstNameForm").value == "" || document.getElementById("lastNameForm").value == "")
+                {
+                    alert("Please fill out all fields")
+                }
+                else if (document.getElementById("passwordForm").value != document.getElementById("passwordConfirmForm").value) {
+                    document.getElementById("passwordConfirmForm").style.border = "3px solid red";
+                    document.getElementById("passwordForm").style.border = "3px solid red";
+                    document.getElementById("warning").innerText = " *Passwords do not match";
+                }
+                else {
+                    document.cookie = "firstName=" + document.getElementById("firstNameForm").value;
+                    document.cookie = "lastName=" + document.getElementById("lastNameForm").value;
+                    document.cookie = "username=" + document.getElementById("usernameForm").value;
+                    document.cookie = "password=" + document.getElementById("passwordForm").value;
+                    document.cookie = "numCars=0";
+                    
+                    document.cookie = "car1Name=MYCAR";
+                    document.cookie = "car1Make=MAKE";
+                    document.cookie = "car1Model=MODEL";
+                    document.cookie = "car1Year=0000";
+                    document.cookie = "car1Miles=0";
+                    document.cookie = "car1NextOilChange=5000";
+                    document.cookie = "car1Purchased=0000";
+                    document.cookie = "car1LastUpdated="
 
-                document.cookie = "car2Name=MYCAR";
-                document.cookie = "car2Make=MAKE";
-                document.cookie = "car2Model=MODEL";
-                document.cookie = "car2Year=0000";
-                document.cookie = "car2Miles=0";
-                document.cookie = "car2NextOilChange=5000";
-                document.cookie = "car2Purchased=0000";
-                document.cookie = "car2LastUpdated="
+                    document.cookie = "car2Name=MYCAR";
+                    document.cookie = "car2Make=MAKE";
+                    document.cookie = "car2Model=MODEL";
+                    document.cookie = "car2Year=0000";
+                    document.cookie = "car2Miles=0";
+                    document.cookie = "car2NextOilChange=5000";
+                    document.cookie = "car2Purchased=0000";
+                    document.cookie = "car2LastUpdated="
 
-                document.cookie = "car3Name=MYCAR";
-                document.cookie = "car3Make=MAKE";
-                document.cookie = "car3Model=MODEL";
-                document.cookie = "car3Year=0000";
-                document.cookie = "car3Miles=0";
-                document.cookie = "car3NextOilChange=5000";
-                document.cookie = "car3Purchased=0000";
-                document.cookie = "car3LastUpdated="
+                    document.cookie = "car3Name=MYCAR";
+                    document.cookie = "car3Make=MAKE";
+                    document.cookie = "car3Model=MODEL";
+                    document.cookie = "car3Year=0000";
+                    document.cookie = "car3Miles=0";
+                    document.cookie = "car3NextOilChange=5000";
+                    document.cookie = "car3Purchased=0000";
+                    document.cookie = "car3LastUpdated="
 
-                document.cookie = "car4Name=MYCAR";
-                document.cookie = "car4Make=MAKE";
-                document.cookie = "car4Model=MODEL";
-                document.cookie = "car4Year=0000";
-                document.cookie = "car4Miles=0";
-                document.cookie = "car4NextOilChange=5000";
-                document.cookie = "car4Purchased=0000";
-                document.cookie = "car4LastUpdated="
+                    document.cookie = "car4Name=MYCAR";
+                    document.cookie = "car4Make=MAKE";
+                    document.cookie = "car4Model=MODEL";
+                    document.cookie = "car4Year=0000";
+                    document.cookie = "car4Miles=0";
+                    document.cookie = "car4NextOilChange=5000";
+                    document.cookie = "car4Purchased=0000";
+                    document.cookie = "car4LastUpdated="
 
-                document.cookie = "car5Name=MYCAR";
-                document.cookie = "car5Make=MAKE";
-                document.cookie = "car5Model=MODEL";
-                document.cookie = "car5Year=0000";
-                document.cookie = "car5Miles=0";
-                document.cookie = "car5NextOilChange=5000";
-                document.cookie = "car5Purchased=0000";
-                document.cookie = "car5LastUpdated="
-                
-                window.location.href = "index.html";
+                    document.cookie = "car5Name=MYCAR";
+                    document.cookie = "car5Make=MAKE";
+                    document.cookie = "car5Model=MODEL";
+                    document.cookie = "car5Year=0000";
+                    document.cookie = "car5Miles=0";
+                    document.cookie = "car5NextOilChange=5000";
+                    document.cookie = "car5Purchased=0000";
+                    document.cookie = "car5LastUpdated="
+                    
+                    window.location.href = "index.html";
+                }
             }
         </script>
         <script>
